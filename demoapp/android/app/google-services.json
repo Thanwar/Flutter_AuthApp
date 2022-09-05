@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "739171080585",
+    "project_id": "flutterthw",
+    "storage_bucket": "flutterthw.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739171080585:android:483c9a0be1742cebd4e958",
+        "android_client_info": {
+          "package_name": "com.example.demoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "739171080585-ouh7bv1l0ltu287pt5vhh4a56lo2b5em.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCm2KvsqZQxhcygvCwliypN1KXu27tG5Bk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "739171080585-ouh7bv1l0ltu287pt5vhh4a56lo2b5em.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
