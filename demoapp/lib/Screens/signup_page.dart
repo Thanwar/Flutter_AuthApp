@@ -1,14 +1,23 @@
 import 'package:demoapp/Screens/login_page.dart';
 import 'package:flutter/material.dart';
 
+import 'package:toast/toast.dart';
+
 class Signup extends StatefulWidget {
   const Signup({super.key});
-
   @override
   State<Signup> createState() => _SignupState();
 }
 
 class _SignupState extends State<Signup> {
+  Signupbtn()
+  {
+    print("SignBTN");
+    // if()
+    // {
+    //   Toast.show("Please enter Email", duration: Toast.lengthLong, gravity:  Toast.bottom);
+    // }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -133,9 +142,7 @@ class _SignupState extends State<Signup> {
                       'Sign Up',
                       style: TextStyle(color: Colors.white),
                     ),
-                    onPressed: () {
-                      print("Sign up");
-                    },
+                    onPressed: Signupbtn,
                     style: TextButton.styleFrom(
                       shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(30)),
