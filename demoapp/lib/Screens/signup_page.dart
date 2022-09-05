@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 
 import 'package:toast/toast.dart';
 
+import '../DBHandler/DbHepler.dart';
+import '../Models/UserModel.dart';
+
 class Signup extends StatefulWidget {
   const Signup({super.key});
   @override
@@ -15,14 +18,23 @@ class _SignupState extends State<Signup> {
   TextEditingController _userPassTEC = TextEditingController();
   TextEditingController _userConPassTEC = TextEditingController();
 
+  var dbHelper;
+
+  @override
+  void initState() {
+    super.initState();
+    dbHelper = DbHelper();
+  }
+
 
   Signupbtn() {
     if (_formkey.currentState!.validate()) {
-      // If the form is valid, display a snackbar. In the real world,
-      // you'd often call a server or save the information in a database.
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Processing Data')),
       );
+      // _formkey.currentContext?.save();
+      // UserModel uModel = UserModel(uname, email, passwd);
+      // dbHelper.saveData(uModel);
     }
   }
 

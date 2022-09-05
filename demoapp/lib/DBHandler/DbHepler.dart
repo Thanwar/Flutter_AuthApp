@@ -6,9 +6,11 @@ import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart';
 import 'dart:io' as io;
 
+import '../Models/UserModel.dart';
+
 class DbHelper {
 
-  static Database _db;
+  static Database? _db;
 
   static const DB_Name = 'test.db';
   static const String Table_User = 'user';
@@ -18,12 +20,8 @@ class DbHelper {
   static const String C_Email = 'email';
   static const String C_Password = 'password';
 
-  Future<Database> get db async {
-    if (_db != null)
-    {
-      return _db;
-    }
-    _db = await initDb();
+  Database? get db  {
+    _db =  initDb();
     return _db;
   }
 
@@ -42,5 +40,12 @@ class DbHelper {
     " PRIMARY KEY ($C_Email)"
     ")");
   }
+
+  Future<int?> saveData(UserModel user) async {
+    var dbClient = await db;
+    var res = await dbClient?.insert(Table_User, user.toMap());
+    return res;
+  }
+
 }
 
